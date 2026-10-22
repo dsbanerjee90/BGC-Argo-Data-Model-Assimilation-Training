@@ -14,7 +14,26 @@ ESA Climate and Marine Production (CAMP):
 https://climate.esa.int/en/observations-and-modelling/camp/
 
 > **Participants:** please complete the software setup below before attending the session.  
-> The practical notebook, datasets, figures, exercises, and solutions will be provided during the class.
+> The repository contains the practical notebook, compact training dataset, required images, and setup files.
+
+## Repository contents
+
+```text
+BGC-Argo-Data-Model-Assimilation-Training/
+├── BGC_Argo_Data_and_Model_Data_Assimilation.ipynb
+├── environment.yml
+├── data/
+│   └── TRJ0035_training_chlorophyll_model_obs_uncertainty.nc
+├── images/
+│   ├── ARGO-float.png
+│   ├── blind_men_elephant.jpg
+│   ├── numerical-ocean-model.jpg
+│   └── sat-ocean-colour.png
+└── scripts/
+    └── check_setup.py
+```
+
+The compact NetCDF dataset combines the TRJ0035 numerical-model chlorophyll field with BGC-Argo and ESA Ocean Colour CCI chlorophyll observations used throughout the exercises.
 
 ## What you need before the session
 
