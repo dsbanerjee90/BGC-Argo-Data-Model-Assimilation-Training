@@ -28,81 +28,157 @@ No specialist ocean-model installation, HPC account, or GPU is required.
 
 ## 1. Install Conda / Mamba
 
-For the smoothest setup, **Miniforge is recommended**. It provides Conda and Mamba and uses the conda-forge package ecosystem.
+For this course, **Miniforge is recommended**. It installs both **Conda** and **Mamba**.
 
-Official Miniforge downloads:
+Official download page:
 
 https://github.com/conda-forge/miniforge/releases
 
 ### macOS
 
-Open Terminal and check your Mac architecture:
+1. Open the built-in **Terminal** app:
+
+   **Applications → Utilities → Terminal**
+
+2. In Terminal, check whether your Mac is Apple Silicon or Intel:
 
 ```bash
 uname -m
 ```
 
-The result tells you which Miniforge installer to download:
+- If it prints `arm64`: download **Miniforge3-MacOSX-arm64.sh**
+- If it prints `x86_64`: download **Miniforge3-MacOSX-x86_64.sh**
 
-- `arm64` → Apple Silicon (M1/M2/M3/M4...)
-- `x86_64` → Intel Mac
-
-Download the matching **macOS** Miniforge installer from the link above.
-
-After installation, allow Miniforge to initialise your shell when asked. Then close and reopen Terminal.
-
-Check:
+3. The installer will normally be in your **Downloads** folder. In Terminal run:
 
 ```bash
-which conda
+cd ~/Downloads
+```
+
+For Apple Silicon:
+
+```bash
+bash Miniforge3-MacOSX-arm64.sh
+```
+
+For Intel Mac:
+
+```bash
+bash Miniforge3-MacOSX-x86_64.sh
+```
+
+4. Follow the installer instructions. When asked whether Miniforge should initialise your shell, answer:
+
+```text
+yes
+```
+
+5. Close Terminal completely and open it again.
+
+6. Check that Conda and Mamba are available:
+
+```bash
 conda --version
-which mamba
 mamba --version
 ```
+
+If both commands print version numbers, the installation is complete.
+
+---
 
 ### Linux
 
-Open a terminal and check your architecture:
+1. Open the **Terminal** application.
+
+   On most Linux systems you can search for **Terminal** in the application menu.
+
+2. Check your computer architecture:
 
 ```bash
 uname -m
 ```
 
-Download the matching **Linux** Miniforge installer from the link above, install it, and reopen the terminal.
+For most modern Linux computers this will be `x86_64`.
 
-Then check:
+3. Download the matching Linux Miniforge installer from:
+
+https://github.com/conda-forge/miniforge/releases
+
+For a standard x86_64 Linux computer, the file is:
+
+```text
+Miniforge3-Linux-x86_64.sh
+```
+
+4. In Terminal, go to your Downloads folder:
+
+```bash
+cd ~/Downloads
+```
+
+5. Run the installer:
+
+```bash
+bash Miniforge3-Linux-x86_64.sh
+```
+
+6. Follow the installer instructions and answer `yes` when asked whether to initialise the shell.
+
+7. Close the Terminal and open it again.
+
+8. Check:
 
 ```bash
 conda --version
 mamba --version
 ```
 
+If both commands print version numbers, the installation is complete.
+
+---
+
 ### Windows
 
-Download the Windows Miniforge installer from:
+Windows is supported, although macOS or Linux is preferable for this practical if available.
+
+1. Download the Windows Miniforge installer from:
 
 https://github.com/conda-forge/miniforge/releases
 
-Complete the installation and then open **Miniforge Prompt**.
+Choose:
 
-Check:
+```text
+Miniforge3-Windows-x86_64.exe
+```
+
+2. Run the installer normally.
+
+3. After installation, open:
+
+**Start Menu → Miniforge Prompt**
+
+4. In the Miniforge Prompt run:
 
 ```bat
 conda --version
 mamba --version
 ```
 
-### Already have Conda?
+If both commands print version numbers, the installation is complete.
 
-A recent Conda installation is fine.
+---
 
-Check:
+### If Conda is already installed
+
+You can first check your existing installation:
 
 ```bash
 conda --version
 ```
 
-If environment solving takes a very long time, particularly with an older Conda installation, installing a current Miniforge distribution is recommended.
+A recent Conda installation is usually fine.
+
+If Conda is very old or takes a very long time to solve environments, install **Miniforge** using the instructions above and use that instead.
 
 ---
 
