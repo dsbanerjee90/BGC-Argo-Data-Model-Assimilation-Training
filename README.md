@@ -49,11 +49,25 @@ uname -m
 - If it prints `arm64`: download **Miniforge3-MacOSX-arm64.sh**
 - If it prints `x86_64`: download **Miniforge3-MacOSX-x86_64.sh**
 
-3. The installer will normally be in your **Downloads** folder. In Terminal run:
+3. Download the installer directly from Terminal.
+
+For **Apple Silicon (arm64)**:
 
 ```bash
 cd ~/Downloads
+curl -L -o Miniforge3-MacOSX-arm64.sh \
+https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh
 ```
+
+For **Intel Mac (x86_64)**:
+
+```bash
+cd ~/Downloads
+curl -L -o Miniforge3-MacOSX-x86_64.sh \
+https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-x86_64.sh
+```
+
+4. Run the installer.
 
 For Apple Silicon:
 
@@ -67,15 +81,15 @@ For Intel Mac:
 bash Miniforge3-MacOSX-x86_64.sh
 ```
 
-4. Follow the installer instructions. When asked whether Miniforge should initialise your shell, answer:
+5. Follow the installer instructions. When asked whether Miniforge should initialise your shell, answer:
 
 ```text
 yes
 ```
 
-5. Close Terminal completely and open it again.
+6. Close Terminal completely and open it again.
 
-6. Check that Conda and Mamba are available:
+7. Check that Conda and Mamba are available:
 
 ```bash
 conda --version
