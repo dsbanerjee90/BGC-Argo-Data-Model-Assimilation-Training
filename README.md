@@ -1,5 +1,9 @@
 # BGC-Argo Data and Model Assimilation Training
 
+## About
+
+Hands-on training resources introducing BGC-Argo observations, ecosystem modelling, and data assimilation through a lightweight Jupyter-based workflow.
+
 Pre-class setup repository for the hands-on training session.
 
 **Author:** Deep S. Banerjee  
