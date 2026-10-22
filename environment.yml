@@ -1,0 +1,15 @@
+name: ecosystem-training
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - xarray
+  - matplotlib
+  - netcdf4
+  - scikit-learn
+  - jupyterlab
+  - ipykernel
+  - ipywidgets
+  - pip
