@@ -45,7 +45,6 @@ You only need:
 - the `ecosystem-training` environment created successfully;
 - JupyterLab working on your computer.
 
-No specialist ocean-model installation, HPC account, or GPU is required.
 
 ---
 
